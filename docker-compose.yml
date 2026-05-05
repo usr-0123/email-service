@@ -1,0 +1,74 @@
+version: "1.0"
+
+services:
+
+  # mssql:
+  #   environment:
+  #     ACCEPT_EULA: "Y"
+  #     SA_PASSWORD: "${MSSQL_DB_PASSWORD}"
+  #   image: mcr.microsoft.com/mssql/server:2022-latest
+  #   container_name: mssql
+  #   ports:
+  #     - 14336:14333
+  #   volumes:
+  #     - mssql:/var/opt/mssql
+  #   restart: unless-stopped
+
+  # postgres:
+  #   image: postgres:16
+  #   container_name: postgres
+  #   ports:
+  #     - "5432:5432"
+  #   environment:
+  #     POSTGRES_USER: user
+  #     POSTGRES_PASSWORD: "${POSTGRE_DB_PASSWORD}"
+  #     POSTGRES_DB: "${POSTGRE_DB}"
+  #   volumes:
+  #     - pgdata:/var/lib/postgresql/data
+  #   restart: unless-stopped
+
+  # pgadmin:
+  #   image: dpage/pgadmin4
+  #   container_name: pgadmin_ui
+  #   restart: unless-stopped
+  #   environment:
+  #     PGADMIN_DEFAULT_EMAIL: "${POSTGRE_DB_EMAIL}"
+  #     PGADMIN_DEFAULT_PASSWORD: "${POSTGRE_DB_PASSWORD}"
+  #   ports:
+  #     - "8084:80"
+
+  rabbitmq:
+    image: rabbitmq:management
+    restart: unless-stopped
+    ports:
+     # AMQP protocal port
+     - "5672:5672"
+     # HTTP management UI
+     - "15672:15672"
+    environment:
+      RABBITMQ_DEFAULT_USER: "${RABBITMQ_DEFAULT_USER}"
+      RABBITMQ_DEFAULT_PASSWORD: "${RABBITMQ_DEFAULT_PASSWORD}"
+    volumes:
+      - rabbitmq_data:/var/lib/rabbitmq
+
+  mongodb:
+    image: mongo:7
+    container_name: mongodb
+    ports:
+      - "27017:27017"
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: "${MONGO_DB_PASSWORD}"
+    volumes:
+      - mongodbdata:/data/db
+    restart: unless-stopped
+
+volumes:
+  mssql:
+  pgdata:
+  mongodbdata:
+  rabbitmq_data:
+
+networks:
+  my_network:
+    driver: bridge
