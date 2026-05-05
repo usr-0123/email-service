@@ -1,0 +1,1 @@
+Project for accessing the client side of the email service.
