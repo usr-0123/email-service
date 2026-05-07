@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <AssemblyName>EmailPlatform.Services.Identity.Api</AssemblyName>
+    <RootNamespace>EmailPlatform.Services.Identity.Api</RootNamespace>
+    <UserSecretsId>emailplatform-identity-api</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BuildingBlocks\Common\EmailPlatform.BuildingBlocks.Common.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Multitenancy\EmailPlatform.BuildingBlocks.Multitenancy.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Observability\EmailPlatform.BuildingBlocks.Observability.csproj" />
+  </ItemGroup>
+
+</Project>
