@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="MassTransit" />
+    <PackageReference Include="MassTransit.RabbitMQ" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\EmailPlatform.BuildingBlocks.Common.csproj" />
+    <ProjectReference Include="..\Contracts\EmailPlatform.BuildingBlocks.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
