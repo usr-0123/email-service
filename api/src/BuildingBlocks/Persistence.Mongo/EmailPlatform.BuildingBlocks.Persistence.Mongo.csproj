@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <PackageReference Include="MongoDB.Driver" />
+    <PackageReference Include="Microsoft.Extensions.Options.ConfigurationExtensions" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\EmailPlatform.BuildingBlocks.Common.csproj" />
+    <ProjectReference Include="..\Multitenancy\EmailPlatform.BuildingBlocks.Multitenancy.csproj" />
+  </ItemGroup>
+
+</Project>
