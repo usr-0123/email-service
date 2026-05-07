@@ -1,0 +1,49 @@
+## .NET
+bin/
+obj/
+*.user
+*.suo
+*.userprefs
+*.binlog
+*.cache
+*.swp
+
+## VS / Rider / VSCode
+.vs/
+.idea/
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+## Build output
+[Dd]ebug/
+[Dd]ebugPublic/
+[Rr]elease/
+[Rr]eleases/
+x64/
+x86/
+
+## Tests / coverage
+TestResults/
+*.coverage
+*.coveragexml
+coverage*.json
+coverage*.xml
+
+## NuGet
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+
+## Secrets
+appsettings.*.json
+!appsettings.json
+appsettings.Development.json
+**/secrets.json
+
+## OS
+.DS_Store
+Thumbs.db
