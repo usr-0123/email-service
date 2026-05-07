@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <ItemGroup>
+    <FrameworkReference Include="Microsoft.AspNetCore.App" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\EmailPlatform.BuildingBlocks.Common.csproj" />
+    <ProjectReference Include="..\Multitenancy\EmailPlatform.BuildingBlocks.Multitenancy.csproj" />
+  </ItemGroup>
+
+</Project>
