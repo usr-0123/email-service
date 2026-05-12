@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>EmailPlatform.Services.Tenants.Domain</AssemblyName>
+    <RootNamespace>EmailPlatform.Services.Tenants.Domain</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BuildingBlocks\Persistence.Mongo\EmailPlatform.BuildingBlocks.Persistence.Mongo.csproj" />
+  </ItemGroup>
+
+</Project>

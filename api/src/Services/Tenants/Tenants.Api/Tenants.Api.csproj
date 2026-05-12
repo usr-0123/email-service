@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <AssemblyName>EmailPlatform.Services.Tenants.Api</AssemblyName>
+    <RootNamespace>EmailPlatform.Services.Tenants.Api</RootNamespace>
+    <UserSecretsId>emailplatform-tenants-api</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" />
+    <PackageReference Include="Swashbuckle.AspNetCore" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Tenants.Application\Tenants.Application.csproj" />
+    <ProjectReference Include="..\Tenants.Infrastructure\Tenants.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Authentication\EmailPlatform.BuildingBlocks.Authentication.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Common\EmailPlatform.BuildingBlocks.Common.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Multitenancy\EmailPlatform.BuildingBlocks.Multitenancy.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Observability\EmailPlatform.BuildingBlocks.Observability.csproj" />
+  </ItemGroup>
+
+</Project>
