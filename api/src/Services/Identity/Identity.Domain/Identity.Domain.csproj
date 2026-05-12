@@ -1,0 +1,8 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>EmailPlatform.Services.Identity.Domain</AssemblyName>
+    <RootNamespace>EmailPlatform.Services.Identity.Domain</RootNamespace>
+  </PropertyGroup>
+
+</Project>

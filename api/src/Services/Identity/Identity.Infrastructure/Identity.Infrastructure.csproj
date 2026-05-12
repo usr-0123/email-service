@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <AssemblyName>EmailPlatform.Services.Identity.Infrastructure</AssemblyName>
+    <RootNamespace>EmailPlatform.Services.Identity.Infrastructure</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" />
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" />
+    <PackageReference Include="Microsoft.Extensions.Hosting" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Identity.Application\Identity.Application.csproj" />
+    <ProjectReference Include="..\Identity.Domain\Identity.Domain.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Authentication\EmailPlatform.BuildingBlocks.Authentication.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Common\EmailPlatform.BuildingBlocks.Common.csproj" />
+    <ProjectReference Include="..\..\..\BuildingBlocks\Persistence.Mongo\EmailPlatform.BuildingBlocks.Persistence.Mongo.csproj" />
+  </ItemGroup>
+
+</Project>
