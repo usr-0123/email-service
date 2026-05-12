@@ -1,0 +1,21 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <AssemblyName>EmailPlatform.Tools.Seed</AssemblyName>
+    <RootNamespace>EmailPlatform.Tools.Seed</RootNamespace>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BCrypt.Net-Next" />
+    <PackageReference Include="MongoDB.Driver" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\Services\Identity\Identity.Domain\Identity.Domain.csproj" />
+    <ProjectReference Include="..\..\src\Services\Tenants\Tenants.Application\Tenants.Application.csproj" />
+    <ProjectReference Include="..\..\src\Services\Tenants\Tenants.Domain\Tenants.Domain.csproj" />
+    <ProjectReference Include="..\..\src\BuildingBlocks\Persistence.Mongo\EmailPlatform.BuildingBlocks.Persistence.Mongo.csproj" />
+  </ItemGroup>
+
+</Project>
